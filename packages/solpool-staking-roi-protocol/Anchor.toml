@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.mainnet]
+solpool_staking_roi_protocol = "So1Poo1Ro1111111111111111111111111111111111"
+
+[programs.devnet]
+solpool_staking_roi_protocol = "So1Poo1Ro1111111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "mainnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "node --experimental-strip-types tests/staking_roi_pool.ts"

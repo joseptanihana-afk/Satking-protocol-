@@ -1,0 +1,54 @@
+{
+  "name": "solpool-staking-roi-protocol",
+  "version": "1.0.0",
+  "description": "SolPool Sovereign Staking (spSOL) — Standalone Solana Proof-of-Stake ROI Protocol & SPL Stake Pool SDK connected to mainnet-beta",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./roi": {
+      "types": "./dist/roi.d.ts",
+      "import": "./dist/roi.js"
+    }
+  },
+  "bin": {
+    "solpool": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cli": "node --experimental-strip-types src/cli.ts",
+    "mainnet:status": "node --experimental-strip-types src/cli.ts status --cluster mainnet-beta",
+    "test": "anchor test"
+  },
+  "keywords": [
+    "solana",
+    "staking",
+    "proof-of-stake",
+    "stake-pool",
+    "roi",
+    "apr",
+    "lst",
+    "mainnet"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@solana/spl-stake-pool": "^1.1.8",
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.98.0",
+    "bs58": "^6.0.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@types/node": "^22.14.0",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "SolPool Protocol",
+  "description": "Node.js Solana Staking ROI & Native Proof-of-Stake Pool Protocol Builder connected to Mainnet-Beta",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
